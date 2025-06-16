@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,12 +62,41 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Futuristic color palette
+				neon: {
+					blue: '#00f5ff',
+					purple: '#b347d9',
+					pink: '#ff2d92',
+					green: '#39ff14',
+					orange: '#ff6600',
+					yellow: '#ffff00'
+				},
+				cyber: {
+					dark: '#0a0a0a',
+					gray: '#1a1a1a',
+					light: '#2a2a2a'
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				'cyber': ['Orbitron', 'monospace'],
+				'neon': ['Rajdhani', 'sans-serif'],
+				'future': ['Exo 2', 'sans-serif']
+			},
+			backgroundImage: {
+				'cyber-grid': "linear-gradient(rgba(0,245,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,255,0.1) 1px, transparent 1px)",
+				'neon-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+				'purple-gradient': 'linear-gradient(135deg, #b347d9 0%, #7c3aed 100%)',
+				'blue-gradient': 'linear-gradient(135deg, #00f5ff 0%, #0ea5e9 100%)',
+				'pink-gradient': 'linear-gradient(135deg, #ff2d92 0%, #ec4899 100%)'
+			},
+			backgroundSize: {
+				'grid': '20px 20px'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +114,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'neon-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor'
+					},
+					'50%': {
+						boxShadow: '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'glow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite'
 			}
 		}
 	},
