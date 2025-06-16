@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { User, Package, Cart, Search } from 'lucide-react';
+import { User, Package, ShoppingCart, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -52,7 +52,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onViewChange, cart
             onClick={() => onViewChange('cart')}
             className={`neon-button relative ${currentView === 'cart' ? 'bg-neon-blue/20' : ''}`}
           >
-            <Cart className="w-4 h-4 mr-2" />
+            <ShoppingCart className="w-4 h-4 mr-2" />
             Cart
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-neon-pink text-xs rounded-full w-5 h-5 flex items-center justify-center animate-neon-pulse">

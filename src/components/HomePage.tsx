@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Share, Cart } from 'lucide-react';
+import { Share, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -169,7 +169,7 @@ const HomePage: React.FC<HomePageProps> = ({ onViewChange, onAddToCart }) => {
                     className="flex-1 neon-button bg-neon-blue/20 hover:bg-neon-blue/30"
                     onClick={() => onAddToCart(product)}
                   >
-                    <Cart className="w-4 h-4 mr-2" />
+                    <ShoppingCart className="w-4 h-4 mr-2" />
                     Add to Cart
                   </Button>
                   <Button 

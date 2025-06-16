@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Share, Cart, Truck, ArrowLeft } from 'lucide-react';
+import { Share, ShoppingCart, Truck, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -180,7 +180,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onView
                 className="flex-1 neon-button bg-neon-blue/20 hover:bg-neon-blue/30 text-lg py-3"
                 onClick={() => onAddToCart({ ...product, quantity })}
               >
-                <Cart className="w-5 h-5 mr-2" />
+                <ShoppingCart className="w-5 h-5 mr-2" />
                 Add to Cart
               </Button>
               <Button 
@@ -274,4 +274,4 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onView
   );
 };
 
-export default ProductDetailPage;
+export default ProductDetailePage;
