@@ -274,4 +274,4 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onView
   );
 };
 
-export default ProductDetailePage;
+export default ProductDetailPage;
